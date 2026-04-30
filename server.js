@@ -29,6 +29,15 @@ app.use('/api/profile', profileRouter);
 app.use('/api/books', bookRouter);
 app.use('/uploads', express.static('uploads'));
 
+app.get('/test', (req, res) => {
+  res.json({
+    success: true,
+    message: "New backend deployment is working!",
+    timestamp: new Date().toISOString(),
+    location: "EC2 Instance - Mumbai Region"
+  });
+});
+
 app.listen(PORT || 4000, () => {
   console.log(`Server running on port ${PORT}`);
 });
