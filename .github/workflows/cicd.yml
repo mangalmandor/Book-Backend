@@ -35,5 +35,5 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-        cd /home/ubuntu/books-project/backend-runner/_work/Book-Frontend/Book-Frontend
+        cd /home/ubuntu/books-project/backend-runner/_work/Book-Backend/Book-Backend
     - run: pm2 restart book-backend --update-env || pm2 start server.js --name "book-backend"
